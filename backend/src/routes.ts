@@ -20,7 +20,7 @@ router.post('/api/login', new AuthUserController().handle)
 
 // Products
 router.post('/api/product', AdminMiddleware, new CreateProductController().handle)
-router.get('/api/getproducts', new GetProductController().handle)
+router.get('/api/getproducts', AdminMiddleware, new GetProductController().handle)
 router.delete('/api/deleteproduct', AdminMiddleware, new DeleteProductController().handle)
 
 // Cart
