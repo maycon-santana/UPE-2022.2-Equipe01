@@ -11,6 +11,7 @@ import { CreateCategoryController } from './controllers/category/CreateCategoryC
 import { ListCategoryController } from './controllers/category/ListCategoryController'
 
 import AdminMiddleware from './middlewares/AdminMiddleware'
+import { CreateAssessmentController } from './controllers/assessment/CreateAssessmentController'
 
 const router = Router()
 
@@ -30,5 +31,8 @@ router.get('/api/getcart', new GetCartController().handle)
 // Category]
 router.post('/api/category', AdminMiddleware, new CreateCategoryController().handle)
 router.get('/api/category', AdminMiddleware, new ListCategoryController().handle)
+
+// Assessment
+router.post('/api/assessment', AdminMiddleware, new CreateAssessmentController().handle)
 
 export { router }
