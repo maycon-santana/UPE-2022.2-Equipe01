@@ -26,8 +26,13 @@ export default function Header() {
             <a>Adicionar produto</a>
           </Link>
 
+<<<<<<< HEAD
           <Link href='/productManager/getProducts' legacyBehavior>
             <a>Catálogo</a>
+=======
+          <Link href='/productManager/getProduct' legacyBehavior>
+            <a>Produto</a>
+>>>>>>> 4f3f661e8df443d5e4ac8c132f44b38b2c5adbef
           </Link>
 
           <Link href='/productManager/getProductId' legacyBehavior>

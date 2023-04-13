@@ -21,6 +21,7 @@ router.post('/api/users', new CreateUserController().handle)
 router.post('/api/login', new AuthUserController().handle)
 
 // Products
+<<<<<<< HEAD
 
 // Adicionar AdminMiddleware para segurança das rotas.
 // router.post('/api/product', AdminMiddleware, new CreateProductController().handle)
@@ -30,6 +31,11 @@ router.get('/api/getproducts', new GetProductsController().handle)
 router.get("/api/getproductid", new GetProductIdController().handle)
 router.delete('/api/deleteproduct', new DeleteProductController().handle)
 router.put("/api/updateproduct", new UpdateProductController().handle)
+=======
+router.post('/api/product', AdminMiddleware, new CreateProductController().handle)
+router.get('/api/getproducts', AdminMiddleware, new GetProductController().handle)
+router.delete('/api/deleteproduct', AdminMiddleware, new DeleteProductController().handle)
+>>>>>>> 4f3f661e8df443d5e4ac8c132f44b38b2c5adbef
 
 // Cart
 router.post('/api/addcart', new CreateCartController().handle)
