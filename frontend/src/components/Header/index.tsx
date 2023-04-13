@@ -30,8 +30,8 @@ export default function Header() {
             <a>Produto</a>
           </Link>
 
-          <Link href='/' legacyBehavior>
-            <a>Produto</a>
+          <Link href='/assessment' legacyBehavior>
+            <a>Avaliação</a>
           </Link>
 
           <button onClick={signOut}>
